@@ -4,18 +4,22 @@ namespace AlgorithmProblems
 {
     class program
     {
+
         public static void Main(String[] args)
         {
-            String s;
-            String answer = "";
+            String[] input = { "vijaya", "lakshmi", "harsha", "aarna" };
+            String find = "lakshmi";
+            AlgorithmProblems.BinarySearch example = new AlgorithmProblems.BinarySearch();
+            int result = example.binarySearch(input, find);
 
-            Console.Write("Enter the string: ");
-            s = Console.ReadLine();
-
-            Console.Write("\nAll possible strings are : ");
-            Permutations value = new Permutations();
-            value.Permute(s, answer);
-
+            if (result == -1)
+                Console.WriteLine("Element not present");
+            else
+                Console.WriteLine("Element found at " + "index " + result);
         }
+
     }
+
+
+
 }
